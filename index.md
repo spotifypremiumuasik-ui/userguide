@@ -27,7 +27,7 @@
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Berikut adalah diagram alur yang menggambarkan tahapan lengkap dari awal hingga akhir:
 
-![Diagram Alur Kerja Sistem](images/TallyProses/diagramAlurKerjaProses.png)
+![Diagram Alur Kerja Sistem](images/TallyProses/diagramAlurKerjaSistem.png)
 _Gambar I.I: Diagram Alur Kerja Sistem._
 
 ---
