@@ -122,6 +122,8 @@
     |Contoh Penggunaan|
     |-------|
 
+   
+
     | Catatan | Hasil |
     |-----------------|-------|
     | "SupplierA" / "Supplier A" / "Supplier a" | Jadi **3 Group** yang **Berbeda** |
@@ -134,7 +136,7 @@
     <br>
 
 
-3. **Mulai Timbang:** Klik **Mulai Timbang** untuk lanjut
+4. **Mulai Timbang:** Klik **Mulai Timbang** untuk lanjut
 
     ![Mulai Timbang](images/TallyProses/mulaiTimbang.png)
     *Gambar III.II: Mulai Timbang*
