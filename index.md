@@ -1,6 +1,6 @@
 # Panduan Operasional Sistem Tally Ikan
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**Tally Proses** adalah modul untuk mencatat seluruh proses pengolahan ikan dari bahan baku sampai siap dikemas.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; **Tally Proses** adalah modul untuk mencatat seluruh proses pengolahan ikan dari bahan baku sampai siap dikemas.
 
 ---
 
