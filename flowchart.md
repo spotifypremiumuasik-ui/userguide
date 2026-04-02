@@ -575,3 +575,9 @@ flowchart TD
 *File ini berisi 13 diagram Mermaid yang mencakup seluruh alur kerja Bagindo.*
 *Render menggunakan: GitLab Markdown, VS Code (Mermaid Preview), atau https://mermaid.live*
 *Terakhir diperbarui: 2 April 2026*
+
+```html
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
