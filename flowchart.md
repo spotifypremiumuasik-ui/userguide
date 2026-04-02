@@ -1,3 +1,7 @@
+layout: default
+title: Flowchart
+permalink: /
+
 # Bagindo â€” Flowchart Sistem
 
 Flowchart lengkap cara kerja project Bagindo (Synergis ERP untuk PT Berkat Agung).
