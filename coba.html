@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Bagindo Flowchart</title>
+
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true });
+</script>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+    background: #f8f9fa;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  .mermaid {
+    background: white;
+    padding: 20px;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+</style>
+</head>
+
+<body>
+
+<h1>Bagindo — Flowchart Sistem</h1>
+
+<h2>1. Alur Request & Autentikasi</h2>
+<div class="mermaid">
+flowchart TD
+A[Browser Request] --> B{URL Path?}
+B -->|"/"| C[index.php Dashboard]
+B -->|"/?module=XXX"| D[Module Router]
+B -->|"/API"| E[API Routes]
+C --> F[Config Load]
+D --> F
+E --> F
+F --> G{Login?}
+G -->|No| H[Redirect Login]
+G -->|Yes| I[Init Session]
+</div>
+
+<h2>2. Dashboard & Navigasi</h2>
+<div class="mermaid">
+flowchart TD
+DASH[Dashboard] --> ACL{Permission}
+ACL --> PEOPLE[People]
+ACL --> PO[Purchase Order]
+ACL --> SALES[Sales]
+ACL --> CRM[CRM]
+ACL --> INV[Inventory]
+ACL --> TALLY[Tally Ikan]
+</div>
+
+<h2>3. Procurement → Sales Flow</h2>
+<div class="mermaid">
+flowchart TD
+PO[Buat PO] --> APPROVE[Approve]
+APPROVE --> RECEIVE[Terima Barang]
+RECEIVE --> STOCK[Stok Masuk]
+STOCK --> SO[Sales Order]
+SO --> DELIVER[Kirim Barang]
+DELIVER --> INVOICE[Invoice]
+INVOICE --> PAY[Payment]
+</div>
+
+<h2>4. Tally Ikan (Produksi)</h2>
+<div class="mermaid">
+flowchart TD
+REG[Registrasi] --> TH1[Penerimaan]
+TH1 --> TH2[Verifikasi]
+TH2 --> TH3[Sorting]
+TH3 --> PROC[Proses]
+PROC --> SOAK[Soaking]
+SOAK --> FREEZE[Freezing]
+FREEZE --> GLAZE[Glazing]
+GLAZE --> PACK[Packing]
+PACK --> LOAD[Loading]
+</div>
+
+<h2>5. Barcode Lifecycle</h2>
+<div class="mermaid">
+flowchart TD
+GEN[Generate Barcode] --> PRINT[Print]
+PRINT --> ASSIGN[Assign Glazing]
+ASSIGN --> SCAN[Scan Packing]
+SCAN --> VALID{Valid?}
+VALID -->|Yes| OK[Success]
+VALID -->|No| ERR[Error]
+</div>
+
+<h2>6. Database Flow</h2>
+<div class="mermaid">
+flowchart TD
+DB1[Synergis DB] --> DB2[Tally DB]
+DB2 --> INV[Inventory Update]
+INV --> SALES[Sales Link]
+</div>
+
+<h2>7. HRD Flow</h2>
+<div class="mermaid">
+flowchart TD
+HRD[HRD Module] --> EMP[Employee]
+HRD --> ABSEN[Absensi]
+HRD --> PAY[Payroll]
+</div>
+
+<h2>8. Integrasi Eksternal</h2>
+<div class="mermaid">
+flowchart TD
+SYS[ERP] --> SSO[OneLogin]
+SYS --> WA[WhatsApp]
+SYS --> GIS[Google Maps]
+SYS --> GPS[Traccar]
+</div>
+
+<h2>9. Environment</h2>
+<div class="mermaid">
+flowchart LR
+DEV --> STAGING --> LIVE
+DEV --> DB[(Database)]
+LIVE --> DB
+</div>
+
+<h2>10. API</h2>
+<div class="mermaid">
+flowchart TD
+API --> USER[User API]
+API --> SALES[Sales API]
+API --> INV[Inventory API]
+</div>
+
+<h2>11. Laporan</h2>
+<div class="mermaid">
+flowchart TD
+RPT --> DAILY[Daily Report]
+RPT --> PROCESS[Process Report]
+RPT --> TEAM[Team Performance]
+</div>
+
+<h2>12. End-to-End Flow</h2>
+<div class="mermaid">
+flowchart TD
+START --> SUPPLIER[Ikan Datang]
+SUPPLIER --> PROCESS[Produksi]
+PROCESS --> PACK[Packing]
+PACK --> SHIP[Shipping]
+SHIP --> DONE
+</div>
+
+</body>
+</html>
