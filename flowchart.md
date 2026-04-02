@@ -1,6 +1,5 @@
 layout: default
 title: Flowchart
-permalink: /
 
 # Bagindo â€” Flowchart Sistem
 
